@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!---- Google Fonts ---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Style Sheets Here -->
+     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
-    
+    <header>
+        <img src="images/cookies-logo.svg" alt="Site Logo" width="512" height="512">
+        <span>The Pickled Bakery</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="seasonal"><a href="#">Current Seasonal Cookies</a></li>
+            <li><a href="#">Holidays</a></li>
+            <li><a href="#">Birthdays</a></li>
+            <li><a href="#">Special Events</a></li>
+        </ul>
+    </nav>
+    <main></main>
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/Shelbizzle626/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub" width="16" height="16">
+            </a>
+            <a href="www.linkedin.com/in/shelby-baird" target="_blank">
+                <img src="images/linkedin.svg" alt="linkedin" width="16" height="16">
+            </a>
+            <a href="https://www.instagram.com/thepickledbakery/" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram" width="16" height="16">
+            </a>
+            <a href="https://www.facebook.com/shelby.baird.3/" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook" width="16" height="16">
+            </a>
+        </div>
+        <p>&#169; 2026 ☘️ <span id="currentyear"></span> Shelby Baird ☘️ Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/navigation.js"></script>
 </body>
 </html>

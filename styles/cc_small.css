@@ -199,7 +199,7 @@ footer p {
 
 .filter-btn {
     font-family: var(--font-main);
-    background-color: var(--color-rust);
+    background-color: var(--color-white);
     color: var(--color-navy);
     border: 2px solid var(--color-navy);
     border-radius: 4px;
@@ -214,9 +214,9 @@ footer p {
 }
 
 .filter-btn.active {
-    background-color: var(--color-rust);
-    border-color: var(--color-rust);
-    color: var(--color-white);
+    background-color: var(--color-rust-light);
+    border-color: var(--color-rust-light);
+    color: var(--color-navy);
 }
 
 .course-cards {

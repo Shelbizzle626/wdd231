@@ -1,0 +1,277 @@
+/********** Color Scheme - Font **********/
+:root {
+    --color-navy: #1B3A4B;
+    --color-slate: #6B8CA3;
+    --color-white: #FFFFFF;
+    --color-rust: #C4703A;
+    --color-light-gray: #EDEDED;
+    --color-text: #2B2B2B;
+
+    --font-main: "Montserrat", sans-serif;
+}
+
+/********** Base / Typography **********/
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-white);
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin: 1rem 0.75rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin: 0 0.75rem 1rem 0.75rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/********** Header **********/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    padding: 0.75rem 1rem;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+}
+
+header .site-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: auto;
+    margin-left: 0.5rem;
+}
+
+/********** Hamburger Button **********/
+.hamburger {
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after,
+.hamburger span {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-white);
+    transition: transform 0.2s ease;
+}
+
+.hamburger::before {
+    top: 0;
+}
+
+.hamburger::after {
+    bottom: 0;
+}
+
+.hamburger span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/********** Navigation **********/
+nav {
+    width: 100%;
+    order: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+nav.open {
+    max-height: 300px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0 0 0;
+}
+
+nav li {
+    border-top: 1px solid var(--color-slate);
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/********** Hover effect **********/
+nav a:hover {
+    color: var(--color-rust);
+}
+
+/********** Wayfinding **********/
+nav a[aria-current="page"] {
+    color: var(--color-rust);
+    font-weight: 600;
+}
+
+/********** Main Layout **********/
+main {
+    padding: 0 0.75rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+section {
+    background-color: var(--color-light-gray);
+    border-left: 4px solid var(--color-rust);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/********** Footer **********/
+footer {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer .socials img {
+    width: 28px;
+    height: 28px;
+}
+
+.socials img {
+    filter: brightness(0) invert(1);
+}
+
+footer p {
+    margin: 0.25rem 0;
+    color: var(--color-white);
+    font-size: 0.85rem;
+}
+
+/********** Course Cards **********/
+.course-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    font-family: var(--font-main);
+    background-color: var(--color-white);
+    color: var(--color-navy);
+    border: 2px solid var(--color-navy);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+}
+
+.filter-btn.active {
+    background-color: var(--color-rust);
+    border-color: var(--color-rust);
+    color: var(--color-white);
+}
+
+.course-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.course-card {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-slate);
+    border-radius: 4px;
+    padding: 0.75rem;
+}
+
+.course-card h3 {
+    margin: 0 0 0.25rem 0;
+    color: var(--color-navy);
+}
+
+.course-card p {
+    margin: 0.15rem 0;
+    font-size: 0.9rem;
+}
+
+/********** Completed **********/
+.course-card.completed {
+    background-color: var(--color-navy);
+    border-color: var(--color-rust);
+    color: var(--color-white);
+}
+
+.course-card.completed h3 {
+    color: var(--color-white);
+}
+
+.course-card.completed::after {
+    content: "✓ Completed";
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-rust);
+}
+
+.total-credits {
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-top: 1rem;
+}
+
+.course-count {
+    font-weight: 600;
+    color: var(--color-rust);
+    margin: 0.5rem 0 1rem 0;
+}

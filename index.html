@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Shelby | WDD 231 Home</title>
+    <meta name="description"
+        content="Home page for Shelby's WDD 231 course projects, including the Chamber of Commerce site and Final project.">
+    <meta name="author" content="Shelby">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/cc_small.css">
+    <link rel="stylesheet" href="styles/cc_large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
+
 <body>
-    
+
+    <header>
+        <img src="images/cc_logo.svg" alt="Site logo" class="logo">
+        <span class="site-name">Shelby</span>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="final/index.html">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>A short introduction goes here — background, interests, and what brought you to web development.</p>
+        </section>
+
+        <section id="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="course-buttons">
+                <button id="btn-all" class="filter-btn active">All Courses</button>
+                <button id="btn-wdd" class="filter-btn">WDD Courses</button>
+                <button id="btn-cse" class="filter-btn">CSE Courses</button>
+            </div>
+            <p id="course-count" class="course-count"></p>
+            <div id="course-cards" class="course-cards"></div>
+            <p id="total-credits" class="total-credits"></p>
+        </section>
+
+        <section id="projects">
+            <h2>Course Projects</h2>
+            <p>An overview of the Chamber of Commerce and Final projects, with links or highlights.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" target="_blank" rel="noopener">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; <span id="currentYear"></span> Shelby | Heber City, Utah</p>
+        </div>
+
+        <div class="last-modified">
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

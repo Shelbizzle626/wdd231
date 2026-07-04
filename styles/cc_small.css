@@ -4,6 +4,7 @@
     --color-slate: #6B8CA3;
     --color-white: #FFFFFF;
     --color-rust: #C4703A;
+    --color-rust-light: #DB9260;
     --color-light-gray: #EDEDED;
     --color-text: #2B2B2B;
 
@@ -133,21 +134,18 @@ nav a {
 
 /********** Hover effect **********/
 nav a:hover {
-    color: var(--color-rust);
+    color: var(--color-rust-light);
 }
 
 /********** Wayfinding **********/
 nav a[aria-current="page"] {
-    color: var(--color-rust);
+    color: var(--color-rust-light);
     font-weight: 600;
 }
 
 /********** Main Layout **********/
 main {
     padding: 0 0.75rem;
-}
-
-main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -201,7 +199,7 @@ footer p {
 
 .filter-btn {
     font-family: var(--font-main);
-    background-color: var(--color-white);
+    background-color: var(--color-rust);
     color: var(--color-navy);
     border: 2px solid var(--color-navy);
     border-radius: 4px;

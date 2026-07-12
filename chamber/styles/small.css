@@ -50,7 +50,7 @@ header {
     filter: brightness(0) invert(1);
 }
 
-header h1 {
+header .site-title {
     font-size: 1.1rem;
     margin: 0;
     color: var(--color-text-light);

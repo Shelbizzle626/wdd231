@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelby Baird | WDD 231 Chamber Directory</title>
+    <meta name="author" content="Shelby Baird">
+    <meta name="description" content="A list of businesses available in Heber City Utah.">
+    <meta property="og:title" content="Chamber of Commerce Heber City Utah">
+    <meta property="og:description"
+        content="Chamber of commerce site for Heber City Utah. A list of businesses and events.">
+    <meta property="og:image" content="images/heber_city.jpg">
+    <meta name="og:url" content="https://shelbizzle626.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon" href="images/mountain.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-content">
+                <img src="images/mountain.ico" alt="Heber City Chamber of Commerce logo" class="logo">
+                <h1>Heber Valley Chamber of Commerce</h1>
+            </div>
+            <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="current">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Directory</h2>
+        <div class="view-toggle">
+            <button id="grid-btn" class="active">Grid</button>
+            <button id="list-btn">List</button>
+        </div>
+        <section id="directory-cards" class="grid-view">
+            <!-- member cards will be inserted here by JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>Heber Valley Chamber of Commerce</p>
+            <p>Heber City, UT</p>
+            <p>info@hebervalleycc.org</p>
+            <p>(435) 555-2300</p>
+        </div>
+        
+        <div class="socials">
+            <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" target="_blank" rel="noopener">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+        </div>
+        
+        <div class="footer-info">
+            <p>WDD 231 Class Project</p>
+            <p>Shelby Baird</p>
+            <p>&copy; <span id="year"></span> Heber Valley Chamber of Commerce</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/directory.js"></script>
+</body>
+
+</html>

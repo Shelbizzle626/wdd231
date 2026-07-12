@@ -1,0 +1,38 @@
+{
+    "family_name": "Baird",
+    "move_in_date": "2016-12-22",
+    "number_of_people": 6,
+    "visited_by_bishopric": true,
+    "family_member": [
+        {
+            "name": "Aaron Baird",
+            "gender": "Male",
+            "birthdate": "1980-06-01"
+        },
+        {
+            "name": "Shelby Baird",
+            "gender": "Female",
+            "birthdate": "1982-10-05"
+        },
+        {
+            "name": "Tyler Baird",
+            "gender": "Male",
+            "birthdate": "2004-09-03"
+        },
+        {
+            "name": "Layla Baird",
+            "gender": "Female",
+            "birthdate": "2011-06-19"
+        },
+        {
+            "name": "Carter Baird",
+            "gender": "Male",
+            "birthdate": "2013-04-30"
+        },
+        {
+            "name": "Cameron Baird",
+            "gender": "Male",
+            "birthdate": "2016-09-19"
+        }
+    ]
+}

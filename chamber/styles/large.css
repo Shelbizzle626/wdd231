@@ -1,0 +1,62 @@
+@media screen and (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    header {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .header-top {
+        width: auto;
+        flex: 1;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+        margin-top: 0;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        border-top: none;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+    }
+
+    #directory-cards.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #directory-cards.list-view {
+        grid-template-columns: 1fr;
+    }
+    
+    .list-view .card-body {
+        align-items: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+        
+    .footer-contact,
+    .socials,
+    .footer-info {
+        margin-bottom: 0;
+    }
+        
+    .footer-info {
+        text-align: right;
+    }
+}

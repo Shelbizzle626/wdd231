@@ -1,0 +1,67 @@
+{
+    "companies": [
+        {
+            "name": "Heber Valley Railroad",
+            "address": "450 S 6th W, Heber City, UT 84032",
+            "phone": "(435) 654-5601",
+            "url": "https://hebertrain.com",
+            "image": "train.png",
+            "membership": 3,
+            "tagline": "Great experiences await"
+        },
+        {
+            "name": "Mountain MERmade",
+            "address": "512 S Main St, Heber City, UT 84032",
+            "phone": "(435) 647-6063",
+            "url": "https://mountainmermade.com",
+            "image": "mermade.png",
+            "membership": 3,
+            "tagline": "Sew and Stay retreat to recharge in the mountains"
+        },
+        {
+            "name": "Valley Hardware",
+            "address": "424 N Main St, Heber City, UT 84032",
+            "phone": "(435) 654-3661",
+            "url": "https://valleyhw.com",
+            "image": "hardware.png",
+            "membership": 2,
+            "tagline": "Locally owned harware shop"
+        },
+        {
+            "name": "Deer Creek State Park",
+            "address": "5566 UT-314, Wallsburg, UT 84082",
+            "phone": "(435) 654-0171",
+            "url": "https://stateparks.utah.gov/parks/deer-creek/",
+            "image": "lake.png",
+            "membership": 3,
+            "tagline": "Windsurf, boat, zipline, swim and fish"
+        },
+        {
+            "name": "Granny's Drive In",
+            "address": "511 S Main St, Heber City, UT 84032",
+            "phone": "(435) 604-5062",
+            "url": "https://grannysdrivein.com",
+            "image": "grannys.png",
+            "membership": 1,
+            "tagline": "Classic diner food and shakes"
+        },
+        {
+            "name": "Gravity Coalition",
+            "address": "110 S Main St D, Heber City, UT 84032",
+            "phone": "(801) 448-6096",
+            "url": "https://gravitycoalition.com",
+            "image": "gravity.png",
+            "membership": 2,
+            "tagline": "Bike, ski, snowboard sales and repair"
+        },
+        {
+            "name": "Delta Stone Products",
+            "address": "2276 S Daniels Rd, Daniel, UT 84032",
+            "phone": "(435) 654-3336",
+            "url": "https://deltastoneproducts.com",
+            "image": "delta.png",
+            "membership": 1,
+            "tagline": "Discover the beauty of natural stone"
+        }
+    ]
+}

@@ -69,9 +69,5 @@ listBtn.addEventListener('click', () => {
     gridBtn.classList.remove('active');
 });
 
-document.querySelector('#year').textContent = new Date().getFullYear();
-
-const lastModified = document.querySelector('#last-modified');
-lastModified.textContent = `Last Modification: ${document.lastModified}`;
 
 getMembers();

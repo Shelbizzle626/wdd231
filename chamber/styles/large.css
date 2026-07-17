@@ -31,6 +31,10 @@
         padding: 0.5rem 1rem;
     }
 
+    .forecast-days {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     #directory-cards.grid-view {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -58,5 +62,9 @@
         
     .footer-info {
         text-align: right;
+    }
+
+    .spotlight-cards {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 }

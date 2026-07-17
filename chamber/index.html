@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelby Baird | WDD 231 Chamber Directory</title>
+    <title>Shelby Baird | WDD 231 Chamber Landing Page</title>
     <meta name="author" content="Shelby Baird">
     <meta name="description" content="A list of businesses available in Heber City Utah.">
     <meta property="og:title" content="Chamber of Commerce Heber City Utah">
     <meta property="og:description"
-        content="Chamber of commerce site for Heber City Utah. A list of businesses and events.">
+        content="Chamber of commerce site for Heber City Utah. A welcome page to Heber City Utah. A preview of what's available.">
     <meta property="og:image" content="https://shelbizzle626.github.io/wdd231/chamber/images/heber_city.jpg">
-    <meta property="og:url" content="https://shelbizzle626.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://shelbizzle626.github.io/wdd231/chamber/index.html">
 
     <link rel="icon" href="images/mountain.ico">
 
@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
-
 <body>
     <header>
         <div class="header-top">
@@ -37,25 +36,59 @@
         </div>
         <nav id="primary-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="current">Directory</a></li>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <h1>Directory</h1>
-        <div class="view-toggle">
-            <button id="grid-btn" class="active">Grid</button>
-            <button id="list-btn">List</button>
-        </div>
-        <section id="directory-cards" class="grid-view">
-            <!-- member cards will be inserted here by JavaScript -->
+        <section class="hero">
+            <div class="hero-image-wrap">
+                <img src="images/wasatch_mountains.jpg" alt="Mountain valley view of Heber City, Utah">
+                <a href="join.html" class="cta-btn">Join the Chamber</a>
+            </div>
+            <h1>Heber City Chamber of Commerce</h1>
+        </section>
+
+        <section class="current-events">
+            <h2>Current Events</h2>
+            <ul class="event-list">
+                <li>
+                    <h3>Heber Valley Farmers Market</h3>
+                    <p>Every Saturday, 9 AM – 1 PM | Heber City Park</p>
+                </li>
+                <li>
+                    <h3>Chamber Networking Breakfast</h3>
+                    <p>August 5, 2026, 7:30 AM | Chamber Office</p>
+                </li>
+                <li>
+                    <h3>Heber Valley Balloon Fest</h3>
+                    <p>September 12–14, 2026 | Wasatch County Fairgrounds</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="current-weather">
+                <p>Current temperature in Heber City: <span id="current-temp"></span></p>
+                <figure>
+                    <img id="weather-icon" src="" alt="">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+        
+            <h3>3-Day Forecast</h3>
+            <div class="forecast-days"></div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div class="spotlight-cards"></div>
         </section>
     </main>
-
     <footer>
         <div class="footer-contact">
             <p>Heber Valley Chamber of Commerce</p>
@@ -63,19 +96,19 @@
             <p>info@hebervalleycc.org</p>
             <p>(435) 555-2300</p>
         </div>
-        
+    
         <div class="socials">
             <a href="https://github.com/shelbizzle626" target="_blank" rel="noopener">
                 <img src="images/github.svg" alt="GitHub">
             </a>
-            <a href="www.linkedin.com/in/shelby-baird" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/shelby-baird" target="_blank" rel="noopener">
                 <img src="images/linkedin.svg" alt="LinkedIn">
             </a>
             <a href="#" target="_blank" rel="noopener">
                 <img src="images/instagram.svg" alt="Instagram">
             </a>
         </div>
-        
+    
         <div class="footer-info">
             <p>WDD 231 Class Project</p>
             <p>Shelby Baird</p>
@@ -83,8 +116,8 @@
             <p id="last-modified"></p>
         </div>
     </footer>
-
-    <script src="scripts/directory.js"></script>
+    
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
 </body>
-
 </html>

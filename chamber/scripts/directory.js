@@ -1,11 +1,4 @@
-const menuToggle = document.querySelector('#menu-toggle');
-const primaryNav = document.querySelector('#primary-nav');
-
-menuToggle.addEventListener('click', () => {
-    primaryNav.classList.toggle('open');
-    const isOpen = primaryNav.classList.contains('open');
-    menuToggle.setAttribute('aria-expanded', isOpen);
-});
+// Mobile nav toggle now lives in scripts/nav.js (shared across all pages)
 
 const membershipLabels = {
     1: 'Member',
@@ -16,6 +9,9 @@ const membershipLabels = {
 async function getMembers() {
     try {
         const response = await fetch('data/members.json');
+        if (!response.ok) {
+            throw new Error(`Fetch failed with status ${response.status}`);
+        }
         const data = await response.json();
         displayMembers(data.companies);
     } catch (error) {
@@ -25,6 +21,10 @@ async function getMembers() {
 
 function displayMembers(companies) {
     const cardContainer = document.querySelector('#directory-cards');
+    if (!cardContainer) {
+        console.error('#directory-cards not found in the DOM');
+        return;
+    }
     cardContainer.innerHTML = '';
 
     companies.forEach((company) => {
@@ -55,19 +55,22 @@ const gridBtn = document.querySelector('#grid-btn');
 const listBtn = document.querySelector('#list-btn');
 const cardContainer = document.querySelector('#directory-cards');
 
-gridBtn.addEventListener('click', () => {
-    cardContainer.classList.add('grid-view');
-    cardContainer.classList.remove('list-view');
-    gridBtn.classList.add('active');
-    listBtn.classList.remove('active');
-});
+if (gridBtn && listBtn && cardContainer) {
+    gridBtn.addEventListener('click', () => {
+        cardContainer.classList.add('grid-view');
+        cardContainer.classList.remove('list-view');
+        gridBtn.classList.add('active');
+        listBtn.classList.remove('active');
+    });
 
-listBtn.addEventListener('click', () => {
-    cardContainer.classList.add('list-view');
-    cardContainer.classList.remove('grid-view');
-    listBtn.classList.add('active');
-    gridBtn.classList.remove('active');
-});
-
+    listBtn.addEventListener('click', () => {
+        cardContainer.classList.add('list-view');
+        cardContainer.classList.remove('grid-view');
+        listBtn.classList.add('active');
+        gridBtn.classList.remove('active');
+    });
+} else {
+    console.error('Grid/List toggle elements not found:', { gridBtn, listBtn, cardContainer });
+}
 
 getMembers();

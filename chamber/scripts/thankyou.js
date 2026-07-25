@@ -1,12 +1,4 @@
-// Mobile nav toggle (see note in scripts/join.js re: shared nav script)
-const menuToggle = document.getElementById('menu-toggle');
-const primaryNav = document.getElementById('primary-nav');
-if (menuToggle && primaryNav) {
-    menuToggle.addEventListener('click', () => {
-        const isOpen = primaryNav.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', isOpen);
-    });
-}
+// Mobile nav toggle now lives in scripts/nav.js (shared across all pages)
 
 // Read the required fields back out of the GET query string
 const params = new URLSearchParams(window.location.search);

@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <script src="scripts/nav.js" defer></script>
     <script src="scripts/join.js" defer></script>
     <script src="scripts/footer.js" defer></script>
 
@@ -100,7 +101,8 @@
 
                 <label for="membership">
                     Membership level
-                    <select id="membership" name="membership" title="Select a membership level" required>
+                    <select id="membership" name="membership" title="Select a membership level" autocomplete="off"
+                        required>
                         <option value="" disabled selected>Select a level&hellip;</option>
                         <option value="np">NP Membership</option>
                         <option value="bronze">Bronze Membership</option>
@@ -112,7 +114,8 @@
                 <label for="description">
                     Business/organization description
                     <textarea id="description" name="description"
-                        title="A brief description of your business or organization" rows="5"></textarea>
+                        title="A brief description of your business or organization" autocomplete="off"
+                        rows="5"></textarea>
                 </label>
 
                 <input type="hidden" name="timestamp" id="timestamp">
@@ -189,7 +192,7 @@
             <li>Access to volunteer and community partnership opportunities</li>
             <li>Newsletter mentions for organization announcements</li>
         </ul>
-        <button class="close-modal" autofocus>Close</button>
+        <button class="close-modal">Close</button>
     </dialog>
 
     <dialog id="modal-bronze" class="benefits-modal">
@@ -200,7 +203,7 @@
             <li>Discounted admission to Chamber training workshops</li>
             <li>One free ribbon-cutting event coordination per year</li>
         </ul>
-        <button class="close-modal" autofocus>Close</button>
+        <button class="close-modal">Close</button>
     </dialog>
 
     <dialog id="modal-silver" class="benefits-modal">
@@ -212,7 +215,7 @@
             <li>Discounted booth pricing at community events</li>
             <li>Quarterly promotional email inclusion</li>
         </ul>
-        <button class="close-modal" autofocus>Close</button>
+        <button class="close-modal">Close</button>
     </dialog>
 
     <dialog id="modal-gold" class="benefits-modal">
@@ -225,7 +228,7 @@
             <li>Priority scheduling for training and advertising slots</li>
             <li>Unlimited ribbon-cutting event coordination</li>
         </ul>
-        <button class="close-modal" autofocus>Close</button>
+        <button class="close-modal">Close</button>
     </dialog>
 </body>
 

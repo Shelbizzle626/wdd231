@@ -1,14 +1,4 @@
-// Mobile nav toggle
-// NOTE: index.html doesn't currently load a script that wires up #menu-toggle.
-// If a shared nav script (e.g. scripts/nav.js) is added later, this block can move there.
-const menuToggle = document.getElementById('menu-toggle');
-const primaryNav = document.getElementById('primary-nav');
-if (menuToggle && primaryNav) {
-    menuToggle.addEventListener('click', () => {
-        const isOpen = primaryNav.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', isOpen);
-    });
-}
+// Mobile nav toggle now lives in scripts/nav.js (shared across all pages)
 
 // Hidden timestamp field - set when the form loads
 const timestampField = document.getElementById('timestamp');
@@ -23,6 +13,10 @@ document.querySelectorAll('.details-link').forEach((link) => {
         const modal = document.getElementById(link.dataset.modal);
         if (modal && typeof modal.showModal === 'function') {
             modal.showModal();
+            const closeBtn = modal.querySelector('.close-modal');
+            if (closeBtn) {
+                closeBtn.focus();
+            }
         }
     });
 });

@@ -378,3 +378,262 @@ footer a {
     height: 32px;
     filter: brightness(0) invert(1);
 }
+
+/* =============================
+   Join page
+   ============================= */
+
+.page-intro {
+    max-width: 700px;
+    margin: 2rem auto 1.5rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.page-intro h1 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.join-layout {
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.join-form {
+    background-color: white;
+    border: 1px solid var(--color-tertiary);
+    border-radius: 8px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.join-form h2 {
+    color: var(--color-primary);
+    margin: 0 0 0.25rem;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    font: inherit;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--color-tertiary);
+    border-radius: 6px;
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 1px;
+}
+
+.join-form input:invalid:not(:placeholder-shown) {
+    border-color: #b3413a;
+}
+
+.hint {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--color-tertiary);
+}
+
+.join-form textarea {
+    resize: vertical;
+    min-height: 6rem;
+}
+
+.join-form input[type="submit"] {
+    align-self: flex-start;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    padding: 0.75rem 1.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.join-form input[type="submit"]:hover,
+.join-form input[type="submit"]:focus {
+    background-color: var(--color-tertiary);
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-content: start;
+}
+
+.membership-card {
+    background-color: white;
+    border: 1px solid var(--color-tertiary);
+    border-top: 5px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: 1.25rem;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: card-in 0.6s ease forwards;
+    animation-delay: calc(var(--delay, 0) * 0.15s);
+}
+
+.membership-card h3 {
+    color: var(--color-primary);
+    margin: 0 0 0.25rem;
+}
+
+.membership-card .price {
+    font-weight: 700;
+    color: var(--color-tertiary);
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.details-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.details-link:hover,
+.details-link:focus {
+    color: var(--color-tertiary);
+}
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.benefits-modal {
+    border: none;
+    border-top: 6px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: 1.75rem;
+    max-width: 420px;
+    width: 90%;
+    color: var(--color-text-dark);
+}
+
+.benefits-modal::backdrop {
+    background-color: rgba(43, 43, 43, 0.55);
+}
+
+.benefits-modal h2 {
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+.benefits-modal ul {
+    padding-left: 1.2rem;
+}
+
+.benefits-modal .close-modal {
+    margin-top: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.benefits-modal .close-modal:hover,
+.benefits-modal .close-modal:focus {
+    background-color: var(--color-tertiary);
+}
+
+/* =============================
+   Thank you page
+   ============================= */
+
+.thankyou-card {
+    background-color: white;
+    border: 1px solid var(--color-tertiary);
+    border-top: 6px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.thankyou-card h1 {
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+.submission-summary {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.submission-summary caption {
+    font-weight: 700;
+    color: var(--color-tertiary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.submission-summary th,
+.submission-summary td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--color-tertiary);
+}
+
+.submission-summary th {
+    width: 45%;
+    color: var(--color-primary);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}

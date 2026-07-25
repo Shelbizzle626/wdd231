@@ -1,11 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Join | Heber Valley Chamber of Commerce</title>
+    <meta name="author" content="Shelby Baird">
+    <meta name="description" content="Apply for membership with the Heber Valley Chamber of Commerce.">
+    <meta property="og:title" content="Join the Heber Valley Chamber of Commerce">
+    <meta property="og:description"
+        content="Apply for membership with the Heber Valley Chamber of Commerce and choose the level that fits your organization.">
+    <meta property="og:image" content="https://shelbizzle626.github.io/wdd231/chamber/images/heber_city.jpg">
+    <meta property="og:url" content="https://shelbizzle626.github.io/wdd231/chamber/join.html">
+
+    <link rel="icon" href="images/mountain.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="header-top">
+            <div class="header-content">
+                <img src="images/mountain.ico" alt="Heber City Chamber of Commerce logo" class="logo">
+                <p class="site-title">Heber Valley Chamber of Commerce</p>
+            </div>
+            <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="current">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Join the Chamber</h1>
+            <p>Tell us about your organization below. Every membership level opens the door to Heber Valley's business
+                community &mdash; pick the one that fits where you are today.</p>
+        </section>
+
+        <div class="join-layout">
+
+            <form class="join-form" method="get" action="thankyou.html">
+                <h2>Membership Application</h2>
+
+                <label for="fname">
+                    First name
+                    <input type="text" id="fname" name="fname" title="Applicant's first name" autocomplete="given-name"
+                        required>
+                </label>
+
+                <label for="lname">
+                    Last name
+                    <input type="text" id="lname" name="lname" title="Applicant's last name" autocomplete="family-name"
+                        required>
+                </label>
+
+                <label for="jobtitle">
+                    Organizational title
+                    <input type="text" id="jobtitle" name="jobtitle" title="Your title within your organization"
+                        autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+                    <span class="hint">Letters, hyphens, and spaces only &mdash; at least 7 characters (e.g. Marketing
+                        Director)</span>
+                </label>
+
+                <label for="email">
+                    Email address
+                    <input type="email" id="email" name="email" title="Your email address" autocomplete="email"
+                        placeholder="e.g. yourname@example.com" required>
+                </label>
+
+                <label for="phone">
+                    Mobile phone number
+                    <input type="tel" id="phone" name="phone" title="Your mobile phone number" autocomplete="tel"
+                        required>
+                </label>
+
+                <label for="orgname">
+                    Business/organization name
+                    <input type="text" id="orgname" name="orgname" title="Name of your business or organization"
+                        autocomplete="organization" required>
+                </label>
+
+                <label for="membership">
+                    Membership level
+                    <select id="membership" name="membership" title="Select a membership level" required>
+                        <option value="" disabled selected>Select a level&hellip;</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label for="description">
+                    Business/organization description
+                    <textarea id="description" name="description"
+                        title="A brief description of your business or organization" rows="5"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application">
+            </form>
+
+            <aside class="membership-cards" aria-label="Membership levels">
+                <article class="membership-card" style="--delay: 0">
+                    <h3>NP Membership</h3>
+                    <p class="price">No fee</p>
+                    <p>For registered non-profit organizations serving Heber Valley.</p>
+                    <a href="#modal-np" class="details-link" data-modal="modal-np">View benefits</a>
+                </article>
+
+                <article class="membership-card" style="--delay: 1">
+                    <h3>Bronze Membership</h3>
+                    <p class="price">Entry level</p>
+                    <p>A solid starting point for new and small businesses.</p>
+                    <a href="#modal-bronze" class="details-link" data-modal="modal-bronze">View benefits</a>
+                </article>
+
+                <article class="membership-card" style="--delay: 2">
+                    <h3>Silver Membership</h3>
+                    <p class="price">Growing businesses</p>
+                    <p>Added visibility and discounts for established members.</p>
+                    <a href="#modal-silver" class="details-link" data-modal="modal-silver">View benefits</a>
+                </article>
+
+                <article class="membership-card" style="--delay: 3">
+                    <h3>Gold Membership</h3>
+                    <p class="price">Top tier</p>
+                    <p>Maximum exposure and perks for Chamber champions.</p>
+                    <a href="#modal-gold" class="details-link" data-modal="modal-gold">View benefits</a>
+                </article>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>Heber Valley Chamber of Commerce</p>
+            <p>Heber City, UT</p>
+            <p>info@hebervalleycc.org</p>
+            <p>(435) 555-2300</p>
+        </div>
+
+        <div class="socials">
+            <a href="https://github.com/shelbizzle626" target="_blank" rel="noopener">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/shelby-baird" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="#" target="_blank" rel="noopener">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+        </div>
+
+        <div class="footer-info">
+            <p>WDD 231 Class Project</p>
+            <p>Shelby Baird</p>
+            <p>&copy; <span id="year"></span> Heber Valley Chamber of Commerce</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+
+    <dialog id="modal-np" class="benefits-modal">
+        <h2>NP Membership Benefits</h2>
+        <ul>
+            <li>Free listing in the online business directory</li>
+            <li>Invitations to Chamber networking events</li>
+            <li>Access to volunteer and community partnership opportunities</li>
+            <li>Newsletter mentions for organization announcements</li>
+        </ul>
+        <button class="close-modal" autofocus>Close</button>
+    </dialog>
+
+    <dialog id="modal-bronze" class="benefits-modal">
+        <h2>Bronze Membership Benefits</h2>
+        <ul>
+            <li>Everything in NP Membership</li>
+            <li>Standard directory listing with business description</li>
+            <li>Discounted admission to Chamber training workshops</li>
+            <li>One free ribbon-cutting event coordination per year</li>
+        </ul>
+        <button class="close-modal" autofocus>Close</button>
+    </dialog>
+
+    <dialog id="modal-silver" class="benefits-modal">
+        <h2>Silver Membership Benefits</h2>
+        <ul>
+            <li>Everything in Bronze Membership</li>
+            <li>Featured "Silver Spotlight" rotation on the home page</li>
+            <li>Two complimentary tickets to the annual Chamber gala</li>
+            <li>Discounted booth pricing at community events</li>
+            <li>Quarterly promotional email inclusion</li>
+        </ul>
+        <button class="close-modal" autofocus>Close</button>
+    </dialog>
+
+    <dialog id="modal-gold" class="benefits-modal">
+        <h2>Gold Membership Benefits</h2>
+        <ul>
+            <li>Everything in Silver Membership</li>
+            <li>Premium "Gold Spotlight" placement on the home page</li>
+            <li>Free booth at all Chamber-hosted events</li>
+            <li>Logo placement on the Chamber website and printed materials</li>
+            <li>Priority scheduling for training and advertising slots</li>
+            <li>Unlimited ribbon-cutting event coordination</li>
+        </ul>
+        <button class="close-modal" autofocus>Close</button>
+    </dialog>
 </body>
+
 </html>

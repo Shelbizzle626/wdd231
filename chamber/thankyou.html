@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelby Baird | WDD 231 Chamber Directory</title>
+    <title>Thank You | Heber Valley Chamber of Commerce</title>
     <meta name="author" content="Shelby Baird">
-    <meta name="description" content="A form for businesses to join the Chamber of Commerce for Heber City Utah.">
-    <meta property="og:title" content="Chamber of Commerce Heber City Utah">
+    <meta name="description" content="Thank you for applying for membership with the Heber Valley Chamber of Commerce.">
+    <meta property="og:title" content="Thank You | Heber Valley Chamber of Commerce">
     <meta property="og:description"
-        content="Chamber of commerce site for Heber City Utah. A list of businesses and events.">
+        content="Thank you for applying for membership with the Heber Valley Chamber of Commerce.">
     <meta property="og:image" content="https://shelbizzle626.github.io/wdd231/chamber/images/heber_city.jpg">
-    <meta property="og:url" content="https://shelbizzle626.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://shelbizzle626.github.io/wdd231/chamber/thankyou.html">
 
     <link rel="icon" href="images/mountain.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -38,7 +41,7 @@
         <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="current">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
@@ -46,13 +49,41 @@
     </header>
 
     <main>
-        <h1>Directory</h1>
-        <div class="view-toggle">
-            <button id="grid-btn" class="active">Grid</button>
-            <button id="list-btn">List</button>
-        </div>
-        <section id="directory-cards" class="grid-view">
-            <!-- member cards will be inserted here by JavaScript -->
+        <section class="thankyou-card">
+            <h1>Thank You!</h1>
+            <p>We've received your membership application. A member of our team will follow up soon.</p>
+
+            <table class="submission-summary">
+                <caption>Application Summary</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">First name</th>
+                        <td id="out-fname"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Last name</th>
+                        <td id="out-lname"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Email</th>
+                        <td id="out-email"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mobile phone</th>
+                        <td id="out-phone"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Business/organization name</th>
+                        <td id="out-orgname"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Submitted</th>
+                        <td id="out-timestamp"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a class="back-link" href="join.html">&larr; Back to the membership form</a>
         </section>
     </main>
 
@@ -68,7 +99,7 @@
             <a href="https://github.com/shelbizzle626" target="_blank" rel="noopener">
                 <img src="images/github.svg" alt="GitHub">
             </a>
-            <a href="www.linkedin.com/in/shelby-baird" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/shelby-baird" target="_blank" rel="noopener">
                 <img src="images/linkedin.svg" alt="LinkedIn">
             </a>
             <a href="#" target="_blank" rel="noopener">
@@ -83,9 +114,6 @@
             <p id="last-modified"></p>
         </div>
     </footer>
-
-    <script src="scripts/directory.js"></script>
-    <script src="scripts/footer.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Gallery photo placeholder">
+  <rect width="600" height="400" fill="#16181c"/>
+  <g stroke="#24262B" stroke-width="2" fill="none">
+    <path d="M0 210 C 150 130 300 210 600 280"/>
+    <path d="M0 280 C 200 210 400 280 600 130"/>
+  </g>
+  <circle cx="300" cy="200" r="34" fill="#B86F78" opacity="0.20"/>
+  <text x="300" y="410" text-anchor="middle" fill="#6c7077" font-family="monospace" font-size="18" letter-spacing="2">DROP PHOTO HERE</text>
+</svg>

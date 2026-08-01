@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelby Baird | WDD 231 Chamber Directory</title>
+    <title>Shelby Baird | WDD 231 Chamber Discover</title>
     <meta name="author" content="Shelby Baird">
-    <meta name="description" content="A form for businesses to join the Chamber of Commerce for Heber City Utah.">
-    <meta property="og:title" content="Chamber of Commerce Heber City Utah">
-    <meta property="og:description"
-        content="Chamber of commerce site for Heber City Utah. A list of businesses and events.">
+    <meta name="description" content="Discover the attractions, parks, and events of Heber Valley, Utah.">
+    <meta property="og:title" content="Discover Heber Valley Utah">
+    <meta property="og:description" content="Explore top attractions and points of interest in Heber Valley, Utah.">
     <meta property="og:image" content="https://shelbizzle626.github.io/wdd231/chamber/images/heber_city.jpg">
-    <meta property="og:url" content="https://shelbizzle626.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://shelbizzle626.github.io/wdd231/chamber/discover.html">
 
     <link rel="icon" href="images/mountain.ico">
 
@@ -19,15 +18,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 
     <script src="scripts/nav.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/discover.js" type="module" defer></script>
     <script src="scripts/footer.js" defer></script>
 </head>
-
 <body>
     <header>
         <div class="header-top">
@@ -42,22 +40,19 @@
         <nav id="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="current">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="current">Discover</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Directory</h1>
-        <div class="view-toggle">
-            <button id="grid-btn" class="active">Grid</button>
-            <button id="list-btn">List</button>
-        </div>
-        <section id="directory-cards" class="grid-view">
-            <!-- member cards will be inserted here by JavaScript -->
-        </section>
+        <h1>Discover Heber Valley</h1>
+        <section id="visit-message" class="visit-message"></section>
+        <section id="discover-cards"></section>
+        <section id="visit-message" class="visit-message"></section>
+        <section id="discover-cards"></section>
     </main>
 
     <footer>
@@ -88,7 +83,7 @@
         </div>
     </footer>
 
-    
+
 </body>
 
 </html>

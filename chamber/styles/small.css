@@ -201,7 +201,7 @@ nav ul li a.current {
 }
 
 main {
-    padding: 0 1rem 1rem;
+    padding: 1.5rem 1rem 1rem;
 }
 
 main h2,
@@ -350,6 +350,107 @@ main h3 {
 .card-info a {
     font-size: 0.9rem;
     color: var(--color-tertiary);
+}
+
+.visit-message {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+#discover-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h";
+}
+
+#discover-cards>div:nth-child(1) {
+    grid-area: a;
+}
+
+#discover-cards>div:nth-child(2) {
+    grid-area: b;
+}
+
+#discover-cards>div:nth-child(3) {
+    grid-area: c;
+}
+
+#discover-cards>div:nth-child(4) {
+    grid-area: d;
+}
+
+#discover-cards>div:nth-child(5) {
+    grid-area: e;
+}
+
+#discover-cards>div:nth-child(6) {
+    grid-area: f;
+}
+
+#discover-cards>div:nth-child(7) {
+    grid-area: g;
+}
+
+#discover-cards>div:nth-child(8) {
+    grid-area: h;
+}
+
+#discover-cards div {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "image"
+        "address"
+        "desc"
+        "button";
+    align-content: start;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+#discover-cards div h2 {
+    grid-area: title;
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+#discover-cards div figure {
+    grid-area: image;
+    margin: 0;
+}
+
+#discover-cards div address {
+    grid-area: address;
+    font-style: normal;
+    margin: 1rem 10px;
+}
+
+#discover-cards div p {
+    grid-area: desc;
+    margin: 1rem 10px;
+}
+
+#discover-cards div button {
+    grid-area: button;
+}
+
+#discover-cards div img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
 }
 
 footer {

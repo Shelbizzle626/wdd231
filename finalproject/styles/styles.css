@@ -229,6 +229,10 @@ a:hover {
   margin: 0 0 .9rem;
 }
 
+.eyebrow-spaced {
+  margin-top: 3.5rem;
+}
+
 .eyebrow::before {
   content: "// ";
   color: var(--bone-dim);

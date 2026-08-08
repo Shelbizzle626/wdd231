@@ -238,6 +238,10 @@ a:hover {
   padding-block: clamp(3.5rem, 8vw, 6rem);
 }
 
+.section-flush {
+  padding-top: 0;
+}
+
 .section-title {
   font-family: var(--display);
   text-transform: uppercase;

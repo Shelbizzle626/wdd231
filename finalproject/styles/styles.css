@@ -958,6 +958,7 @@ a:hover {
   border-radius: 8px;
   padding: 0.6rem 1rem;
   cursor: pointer;
+  width: fit-content;
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -986,11 +987,6 @@ a:hover {
 .rider-fav[aria-pressed="true"] {
   background: var(--blaze);
   color: var(--bark);
-}
-
-.rider-more,
-.rider-fav {
-  width: fit-content;
 }
 
 .star {

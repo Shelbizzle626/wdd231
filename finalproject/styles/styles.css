@@ -553,7 +553,7 @@ a:hover {
   padding: 1.5rem;
 }
 
-.namebox h3 {
+.namebox h2 {
   font-family: var(--display);
   text-transform: uppercase;
   margin: 0 0 .6rem;

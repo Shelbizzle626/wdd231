@@ -5,8 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Team — Stabby Rats Racing</title>
   <meta name="description" content="The story behind Stabby Rats Racing, a family mountain biking team.">
-  <link rel="icon" href="images/logo-badge.png">
+  <meta name="author" content="Shelby Baird">
+  
+  <meta property="og:title" content="About - Stabby Rats Racing">
+  <meta property="og:description"
+    content="A little about a family mountain biking team. We are not the fastest thing on the mountain — we're just the hardest to get rid of.">
+  <meta property="og:image" content="https://stabbyratsracing.com/images/logo-full.jpg">
+  <meta property="og:url" content="https://stabbyratsracing.com/">
+  <meta property="og:type" content="website">
+  
   <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" href="images/favicon-red.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-red-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-red-16x16.png">
+  <link rel="apple-touch-icon" href="images/favicon-red-180x180.png">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +50,7 @@
           <!-- ===== EDIT THIS: your real story goes here ===== -->
           <div class="prose">
             <p>Stabby Rats Racing started the way most bad ideas in our family start: someone said &ldquo;we should sign up,&rdquo; and nobody had a good enough reason to say no.</p>
-            <p>We&rsquo;re not a sponsored team. We&rsquo;re not chasing podiums (okay, sometimes we are). We&rsquo;re a family that loads too many bikes onto one rack, drives to the trailhead, and figures it out from there. Some of us are fast. Some of us are enthusiastic. Some of us are just there for the snacks and yelling, aka cheering. Everyone finishes covered in dirt.</p>
+            <p>We&rsquo;re not a sponsored team. We&rsquo;re not chasing podiums (okay, sometimes we are). We&rsquo;re a family that loads too many bikes onto one rack, drives to the trailhead, and figures it out from there. Some of us are fast. Some of us are enthusiastic. Some of us are just there for the snacks and cheering. Everyone finishes covered in dirt.</p>
             <p class="muted">Ask any of us why we ride and you'll get a different answer. It's fun. It's hard. It's scary. Some days it's genuinely
             terrible — and we keep showing up anyway, because the part we actually love is doing it together. That's where Stabby
             Rats came from: a family that wanted to keep making memories. The biking runs in our blood, and the legacy
@@ -57,9 +70,56 @@
           <li>Cheer loudest for whoever&rsquo;s slowest that day.</li>
           <li>Fix it at the trailhead with whatever&rsquo;s in the car.</li>
           <li>Snacks are a non-negotiable team infrastructure.</li>
-        </ul>
-      </div>
-    </section>
+          </ul>
+          
+          <p class="eyebrow" style="margin-top:3.5rem">Join us</p>
+          <h2 class="section-title">Come ride with us</h2>
+          <p class="lede">Family, friends, neighbors &mdash; if you&rsquo;ve got a bike and a little dirt tolerance, we&rsquo;d
+            love to have you out. Tell us a bit about you and we&rsquo;ll follow up.</p>
+          
+          <form class="sheet ride-form" action="thanks.html" method="get">
+            <div class="field">
+              <label for="rf-name">Name</label>
+              <input type="text" id="rf-name" name="name" required>
+            </div>
+          
+            <div class="field">
+              <label for="rf-email">Email</label>
+              <input type="email" id="rf-email" name="email" required>
+            </div>
+          
+            <div class="field">
+              <label for="rf-discipline">Riding interest</label>
+              <select id="rf-discipline" name="discipline" required>
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option value="Downhill">Downhill</option>
+                <option value="Cross-country">Cross-country</option>
+                <option value="Enduro">Enduro</option>
+                <option value="Just here for snacks">Just here for snacks</option>
+              </select>
+            </div>
+          
+            <div class="field">
+              <label for="rf-experience">Experience level</label>
+              <select id="rf-experience" name="experience" required>
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option value="Brand new">Brand new</option>
+                <option value="Casual rider">Casual rider</option>
+                <option value="Racing regularly">Racing regularly</option>
+              </select>
+            </div>
+          
+            <div class="field field-wide">
+              <label for="rf-message">Anything else we should know?</label>
+              <textarea id="rf-message" name="message" rows="4"
+                placeholder="Bike you ride, trails you love, questions you have&hellip;"></textarea>
+            </div>
+          
+            <button class="btn" type="submit">Send it</button>
+          </form>
+          </div>
+          </section>
+          </main>
   </main>
 
   <footer class="site-footer">
@@ -77,6 +137,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

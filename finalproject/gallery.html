@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery — Stabby Rats Racing</title>
   <meta name="description" content="Photos from the trail: mud, jumps, podiums, and the occasional crash.">
-  <link rel="icon" href="images/logo-badge.png">
+  <meta name="author" content="Shelby Baird">
+  
+  <meta property="og:title" content="Gallery - Stabby Rats Racing">
+  <meta property="og:description"
+    content="A gallyer of photos of past rides and epic times.">
+  <meta property="og:image" content="https://stabbyratsracing.com/images/logo-full.jpg">
+  <meta property="og:url" content="https://stabbyratsracing.com/">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" href="images/favicon-red.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-red-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-red-16x16.png">
+  <link rel="apple-touch-icon" href="images/favicon-red-180x180.png">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
@@ -34,21 +49,37 @@
         <h1 class="section-title">Mud, air, and bad ideas</h1>
         <p class="lede">If you're not bleeding, you're not trying.</p>
 
-        <!-- ===== EDIT THESE: drop your photos in images/gallery/ and point each src at them.
+        <!-- ===== EDIT THESE: Add or remove figures for more pictures or to remove old ones.
              Keep the loading="lazy" attribute so the page stays fast on phones.
              Aim for ~1200px wide, compressed (WebP or optimized JPG), under ~300KB each. -->
         <div class="gallery">
-          <figure class="shot"><img src="images/gallery/joel_ftb_25.jpg" alt="Joel" loading="lazy"><figcaption class="cap">Fears Tears & Beers</figcaption></figure>
-          <figure class="shot"><img src="images/gallery/layla_ftb_25.jpg" alt="Layla" loading="lazy"><figcaption class="cap">Fears Tears & Beers</figcaption></figure>
-          <figure class="shot"><img src="images/gallery/layla_podium_ftb25.jpg" alt="Layla" loading="lazy"><figcaption class="cap">3rd Place</figcaption></figure>
-          <figure class="shot"><img src="images/gallery/aarong_ftb_25.jpg" alt="Aaron" loading="lazy"><figcaption class="cap">Fears Tears & Beers</figcaption></figure>
+          <figure class="shot"><img src="images/gallery/joel_ftb_25.jpg" alt="Joel" loading="lazy">
+            <figcaption class="cap">Fears Tears & Beers</figcaption>
+          </figure>
+          <figure class="shot"><img src="images/gallery/layla_ftb_25.jpg" alt="Layla" loading="lazy">
+            <figcaption class="cap">Fears Tears & Beers</figcaption>
+          </figure>
+          <figure class="shot"><img src="images/gallery/layla_podium_ftb25.jpg" alt="Layla" loading="lazy">
+            <figcaption class="cap">3rd Place</figcaption>
+          </figure>
+          <figure class="shot"><img src="images/gallery/aarong_ftb_25.jpg" alt="Aaron" loading="lazy">
+            <figcaption class="cap">Fears Tears & Beers</figcaption>
+          </figure>
           <figure class="shot"><img src="images/gallery/layla_crash.jpg" alt="Layla" loading="lazy">
             <figcaption class="cap">Curb Crash</figcaption>
           </figure>
-          <figure class="shot"><img src="images/gallery/joel_3peaks-2026.jpg" alt="Joel" loading="lazy"><figcaption class="cap">3Peaks 2026</figcaption></figure>
-          <figure class="shot"><img src="images/gallery/layla_3peaks-2026.jpg" alt="Layla" loading="lazy"><figcaption class="cap">3Peaks 2026</figcaption></figure>
-          <figure class="shot"><img src="images/gallery/aaron2_3peaks-2026.jpg" alt="Aaron" loading="lazy"><figcaption class="cap">3Peaks 2026</figcaption></figure>
-          <figure class="shot"><img src="images/gallery/big_tyler_3peaks-2026.jpg" alt="Big Tyler" loading="lazy"><figcaption class="cap">3Peaks 2026</figcaption></figure>
+          <figure class="shot"><img src="images/gallery/joel_3peaks-2026.jpg" alt="Joel" loading="lazy">
+            <figcaption class="cap">3Peaks 2026</figcaption>
+          </figure>
+          <figure class="shot"><img src="images/gallery/layla_3peaks-2026.jpg" alt="Layla" loading="lazy">
+            <figcaption class="cap">3Peaks 2026</figcaption>
+          </figure>
+          <figure class="shot"><img src="images/gallery/aaron2_3peaks-2026.jpg" alt="Aaron" loading="lazy">
+            <figcaption class="cap">3Peaks 2026</figcaption>
+          </figure>
+          <figure class="shot"><img src="images/gallery/big_tyler_3peaks-2026.jpg" alt="Big Tyler" loading="lazy">
+            <figcaption class="cap">3Peaks 2026</figcaption>
+          </figure>
           <figure class="shot"><img src="images/gallery/aaron_3Peaks-2026.jpg" alt="Aaron" loading="lazy">
             <figcaption class="cap">3Peaks 2026</figcaption>
           </figure>
@@ -87,6 +118,7 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
+
 </html>
